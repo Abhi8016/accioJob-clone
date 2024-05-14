@@ -1,0 +1,70 @@
+@import "../../mixins.scss";
+
+.header {
+  position: fixed;
+  // border: 2px solid blue;
+  width: 100%;
+  height: 60px;
+  z-index: 2;
+  background-color: var(--white);
+}
+.mainNavBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--white);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  // border: 2px solid red;
+
+  .left {
+    // border: 2px solid blue;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    // justify-content: space-between;
+
+    .logo {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      // gap: -20px;
+      width: 130px;
+      // border: 2px solid green;
+      img {
+        height: 30px;
+      }
+      .rotetingLogo{
+        transition: transform 0.8s ease;
+      }
+      .rotetingLogo:hover{
+        transform: rotate(1080deg);
+      }
+      .tiltLogo{
+        transition: transform 0.8s ease;
+      }
+      .tiltLogo:hover{
+        transform: rotate(4deg);
+      }
+    }
+  }
+  .right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    // justify-content: space-between;
+  }
+}
+.notice {
+  // border: 2px solid green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--blue);
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  // font-family: Satoshi, sans-serif;
+}
