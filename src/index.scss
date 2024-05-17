@@ -25,6 +25,11 @@
     rgba(29, 253, 217, 1) 30%,
     rgba(69, 183, 252, 1) 70%
   );
+  --gradient-2: linear-gradient(
+    276.97deg,
+    rgb(153, 47, 237),
+    rgb(47, 128, 237)
+  );
 }
 
 * {
@@ -35,4 +40,28 @@
 
 body {
   background-color: var(--white);
+}
+
+::-webkit-scrollbar {
+  width: 3px; /* width of the entire scrollbar */
+  
+}
+.auto::-webkit-scrollbar {
+  width: 20px; /* width of the entire scrollbar */
+  
+}
+
+@include md {
+  ::-webkit-scrollbar-track {
+    
+  }
+}
+
+@include md {
+  ::-webkit-scrollbar-thumb {
+    height: 150px;
+    background: var(--blue); /* color of the scroll thumb */
+    border-radius: 2px; /* roundness of the scroll thumb */
+    // border: 3px solid orange;  /* creates padding around scroll thumb */
+  }
 }
