@@ -1,5 +1,18 @@
-.homee {
+@import "../../mixins.scss";
+.home {
+  // border: 2px solid red;
   position: absolute;
-  margin-top: 180px;  
+  margin-top: 100px;
   height: 1000vh;
+  width: 100%;
+  @include md {
+    margin-top: 120px;
+  }
+  .heroSection{
+    // border: 2px solid green;
+    @include md {
+      display: flex;
+      gap: 20px;
+    }
+  }
 }

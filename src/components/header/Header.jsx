@@ -42,7 +42,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={`navBar ${mobileView ? "mobileView" : ""}`} >
+      <header className={`navBar ${mobileView ? "mobileView" : ""}`}>
         <ContentWrapper>
           <div className="left">
             <div className="logo">
@@ -58,6 +58,7 @@ const Header = () => {
                   className="btn"
                   onClick={() => {
                     setCourseListView(!courseListView);
+                    setMoreListView(false);
                   }}
                 >
                   <p>
@@ -88,7 +89,7 @@ const Header = () => {
                 className="panel"
                 onClick={() => {
                   setMobileView(!mobileView);
-                  setCourseListView(false)
+                  setCourseListView(false);
                 }}
               >
                 {mobileView ? <VscChromeClose /> : <SlMenu />}
@@ -100,8 +101,14 @@ const Header = () => {
               <p>AccioJob Rivew</p>
               <p>placement highlights</p>
               <p>refer & earn</p>
-              <p>More</p>
-
+              <p
+                onClick={() => {
+                  setMoreListView(!moreListView);
+                  setCourseListView(false);
+                }}
+              >
+                More
+              </p>
               <CommonButton
                 text={"Go To Dashbord"}
                 btnColor={"var(--white)"}
@@ -142,7 +149,12 @@ const Header = () => {
       </header>
       {courseListView && (
         <>
-          <div className="courselist-wraper" onClick={() => {setCourseListView(false)}}>
+          <div
+            className="courselist-wraper"
+            onClick={() => {
+              setCourseListView(false);
+            }}
+          >
             <div className="courselist-list">
               <div>
                 IIT Guwahati Programs<span className="new">New</span>
@@ -165,6 +177,20 @@ const Header = () => {
             </div>
           </div>
         </>
+      )}
+      {moreListView && (
+        <div
+          className="morelist"
+          onClick={() => {
+            setMoreListView(false);
+          }}
+        >
+          <div className="moreItems">
+            <div>Events</div>
+            <div>Blogs</div>
+            <div>Hire From Us</div>
+          </div>
+        </div>
       )}
     </>
   );

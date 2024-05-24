@@ -11,6 +11,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        {/* <Route path="/or" element={<Or />} /> */}
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>

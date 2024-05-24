@@ -1,0 +1,8 @@
+@import "../../../mixins.scss";
+.orbitContainer {
+  border: 2px solid blue;
+  @include md {
+    width: 600px;
+    height: 600px;
+  }
+}
