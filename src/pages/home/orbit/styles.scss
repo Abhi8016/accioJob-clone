@@ -1,8 +1,183 @@
 @import "../../../mixins.scss";
-.orbitContainer {
-  border: 2px solid blue;
-  @include md {
-    width: 600px;
-    height: 600px;
+
+.orbitComponent {
+  padding: 30px 20px;
+  border-radius: 20px;
+  background-color: var(--white);
+  position: relative;
+  // border: 2px solid red;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  align-items: center;
+  .headingOrbit {
+    font-size: 24px;
+    font-weight: 600;
+    .colorText {
+      color: var(--blue);
+    }
+  }
+  .subHeadingOrbit {
+    color: var(--greay);
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+  }
+  //////////////////////////////////////////
+  .orbitContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    // border: 2px solid blue;
+    width: 330px;
+    height: 310px;
+    margin-bottom: 10px;
+    @include md {
+      width: 500px;
+      height: 450px;
+    }
+    .core,
+    .react,
+    .js,
+    .python {
+      position: absolute;
+      // border: 1.5px solid var(--greay2);
+      border-radius: 50%;
+    }
+    .core {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 120px;
+      height: 120px;
+      border: none;
+      box-shadow: 0px 1px 16px -2px var(--blue);
+      img {
+        padding: 10px;
+        border-radius: 50%;
+        width: 65px;
+        height: 65px;
+        box-shadow: 0px 1px 16px -2px var(--blue);
+      }
+    }
+    .react {
+      width: 180px;
+      height: 180px;
+      box-shadow: 0px 1px 16px -2px var(--blue);
+      animation: spinClockWise 30s linear infinite;
+    }
+    .js {
+      width: 230px;
+      height: 230px;
+      box-shadow: 0px 1px 16px -2px var(--blue);
+      animation: spinClockWise 30s linear infinite;
+    }
+    .python {
+      width: 280px;
+      height: 280px;
+      box-shadow: 0px 1px 16px -2px var(--blue);  
+      animation: spinClockWise 30s linear infinite;
+    }
+
+    .react::before,
+    .js::before,
+    .python::before {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      // background-color: var(--white);
+    }
+    .react::after,
+    .js::after,
+    .python::after {
+      content: "";
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      // background-color: var(--white);
+    }
+
+    .react::before {
+      inset: -39.5px 0px 0px 100px;
+      background-image: url("../../../assets/7423888_react_react native_icon.png");
+      background-size: cover;
+      animation: spinAntiClockWise 10s linear infinite;
+    }
+    .react::after {
+      top: 184px;
+      left: 40px;
+      background-image: url("../../../assets/redux-icon.png");
+      background-size: cover;
+      animation: spinAntiClockWise 10s linear infinite;
+    }
+    .js::before {
+      top: 85px;
+      left: 210px;
+      background-image: url("../../../assets/652581_code_command_develop_javascript_language_icon.png");
+      background-size: cover;
+      animation: spinAntiClockWise 10s linear infinite;
+    }
+    .js::after {
+      top: 115px;
+      left: -15px;
+      background-image: url("../../../assets/308444_javascrpt_js_library_long shadow_nodejs_icon.png");
+      background-size: cover;
+      animation: spinAntiClockWise 10s linear infinite;
+    }
+    .python::before {
+      top: 19px;
+      left: 27px;
+      background-image: url("../../../assets/4375050_logo_python_icon.png");
+      background-size: cover;
+      animation: spinAntiClockWise 10s linear infinite;
+    }
+    .python::after {
+      top: 228px;
+      left: 210px;
+      background-image: url("../../../assets/386470_java_coffee_icon.png");
+      background-size: cover;
+      animation: spinAntiClockWise 10s linear infinite;
+    }
+  }
+  //////////////////////////////////////////
+  .backgroundShadow {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, auto);
+    z-index: -1;
+    .color {
+      width: 90%;
+      height: 90%;
+    }
+    filter: opacity(55%);
+    .color:first-child {
+      box-shadow: 0 0 115px hsla(3, 100%, 71%, 0.773);
+    }
+    .color:nth-child(2) {
+      box-shadow: 0 0 115px rgba(148, 95, 246, 0.773);
+    }
+    .color:nth-child(3) {
+      box-shadow: 0 0 115px rgba(55, 151, 210, 0.773);
+    }
+    .color:nth-child(4) {
+      box-shadow: 0 0 115px #ff940a;
+    }
+  }
+}
+
+@keyframes spinClockWise {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinAntiClockWise {
+  to {
+    transform: rotate(-360deg);
   }
 }

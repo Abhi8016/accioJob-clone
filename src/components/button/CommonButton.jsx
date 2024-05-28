@@ -6,7 +6,9 @@ const CommonButton = ({
   textColor,
   shawodColor,
   borderColor,
-  paddingHV
+  paddingHV,
+  fontSize,
+  fontWight
 }) => {
   return (
     <>
@@ -20,6 +22,8 @@ const CommonButton = ({
             background: `${btnColor}`,
             color: `${textColor}`,
             border: `2px solid ${borderColor}`,
+            fontSize :`${fontSize}`,
+            fontWeight :`${fontWight}`
           }}
         >
           {text}
