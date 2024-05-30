@@ -15,7 +15,7 @@
   -webkit-text-size-adjust: 100%;
 
   --black: #2a2f32;
-  --lightBlue: #EEF9FF;
+  --lightBlue: #eef9ff;
   --blue: #2e81ed;
   --buttonBlue: #033b88;
   --deepBlue: #022555;
@@ -44,19 +44,25 @@
 body {
   background-color: var(--white);
 }
-
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+a:visited{
+  color: var(--blue);
+}
+a:link{
+  color: var(--blue);
+}
 ::-webkit-scrollbar {
   width: 3px; /* width of the entire scrollbar */
-  
 }
 .auto::-webkit-scrollbar {
   width: 20px; /* width of the entire scrollbar */
-  
 }
 
 @include md {
   ::-webkit-scrollbar-track {
-    
   }
 }
 
