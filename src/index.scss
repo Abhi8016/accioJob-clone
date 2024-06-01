@@ -17,10 +17,13 @@
   --black: #2a2f32;
   --lightBlue: #eef9ff;
   --blue: #2e81ed;
+  --blue2: #84a8d8;
+  --blue3: #eff8ff;
   --buttonBlue: #033b88;
   --deepBlue: #022555;
   --linkdinBlue: #0376b5;
   --white: #fefffe;
+  --white2: #ffffff;
   --greay: #667085;
   --greay2: #c2c4c7;
   --gradient: linear-gradient(
@@ -43,15 +46,16 @@
 
 body {
   background-color: var(--white);
+  // line-height: 1.6;
 }
 a {
   text-decoration: none;
   color: var(--blue);
 }
-a:visited{
+a:visited {
   color: var(--blue);
 }
-a:link{
+a:link {
   color: var(--blue);
 }
 ::-webkit-scrollbar {
@@ -63,14 +67,26 @@ a:link{
 
 @include md {
   ::-webkit-scrollbar-track {
+    display: none;
   }
 }
 
 @include md {
   ::-webkit-scrollbar-thumb {
+    // display: none;
     height: 150px;
     background: var(--blue); /* color of the scroll thumb */
-    border-radius: 2px; /* roundness of the scroll thumb */
+    border-radius: 50px; /* roundness of the scroll thumb */
     // border: 3px solid orange;  /* creates padding around scroll thumb */
   }
+
+  // ::-webkit-scrollbar:horizontal {
+  //   height: 0;
+  //   width: 0;
+  //   display: none;
+  // }
+  
+  // ::-webkit-scrollbar-thumb:horizontal {
+  //   display: none;
+  // }
 }
