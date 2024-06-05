@@ -1,0 +1,161 @@
+@import "../../../mixins.scss";
+.announcement {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  .announcement_heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    .colorHeading {
+      background: var(--gradient-2);
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 1.5px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 21px;
+      @include md {
+        font-size: 22px;
+        padding-top: 50px;
+        padding-bottom: 10px;
+      }
+    }
+    .bigHeading {
+      color: var(--blue);
+      letter-spacing: -1.6px;
+      line-height: 40px;
+      font-size: 24px;
+      font-weight: 600;
+      text-align: center;
+      @include md {
+        font-size: 40px;
+        // padding-bottom: 25px;
+      }
+      &::after {
+        content: " For You";
+        color: var(--black);
+      }
+      &::before {
+        content: "Launching ";
+        color: var(--black);
+      }
+    }
+  }
+  .announcementBox {
+    width: 100%;
+    // position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    perspective: 300px;
+    perspective-origin: bottom;
+    @include md {
+      // width: auto;
+      display: flex;
+      flex-direction: row !important;
+      padding: 30px 20px;
+      justify-content: center;
+      //   align-items: stretch;
+    }
+    .borderBox {
+      box-shadow: 0 2px 40px 0 rgba(0, 0, 0, 0.078);
+      width: 400px;
+      max-width: 100%;
+      position: relative;
+      padding: 2px;
+      overflow: hidden;
+      border-radius: 11px;
+      transition: all 0.5s ease;
+      &:hover {
+        cursor: pointer;
+        transform: rotateX(2deg);
+        box-shadow: -12px 10px 25px 0px rgba(0, 0, 0, 0.75);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+        height: 700px;
+        width: 120px;
+        background-color: var(--greay2);
+        border-radius: 11px;
+        animation: move 4s linear infinite;
+      }
+      .anouncement_card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        // border: 3px solid green;
+        position: relative;
+        background-color: var(--white);
+        height: 100%;
+        width: 100%;
+        z-index: 99 !important;
+        border-radius: 10px;
+        .icon {
+          height: 48px;
+          width: 48px;
+          @include md {
+            height: 60px;
+            width: 60px;
+          }
+        }
+        .fadedIcon {
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+        .details {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          .goli {
+            padding: 8px 12px;
+            // background-color: var(--blue);
+            width: fit-content;
+            color: var(--white);
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 400;
+          }
+          .des {
+            margin-top: 7px;
+            color: var(--black);
+            font-weight: 600;
+            font-size: 20px;
+            @include md {
+              margin-top: 12px;
+              font-size: 22px;
+            }
+          }
+          .courses {
+            color: var(--greay);
+            font-size: 15px;
+            margin-top: 5px;
+            @include md {
+              margin-top: 10px;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@keyframes move {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

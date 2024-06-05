@@ -8,6 +8,7 @@ import HeadingText from "./headingText/HeadingText";
 import testimonials from "../../dataUtils/testimonials";
 import Carousel1 from "../../components/carousel/Carousel1";
 import PlacementCompanyRail from "./placementCompanyRail/PlacementCompanyRail";
+import Announcement from "./announcement/Announcement";
 const Home = () => {
   return (
     <div className="home">
@@ -33,6 +34,9 @@ const Home = () => {
       <ContentWrapper>
         <PlacementCompanyRail />
       </ContentWrapper>
+      <div className="announecement">
+        <Announcement />
+      </div>
     </div>
   );
 };
