@@ -7,13 +7,14 @@ import HeadingText from "./headingText/HeadingText";
 
 import testimonials from "../../dataUtils/testimonials";
 import Carousel1 from "../../components/carousel/Carousel1";
+import PlacementCompanyRail from "./placementCompanyRail/PlacementCompanyRail";
 const Home = () => {
   return (
     <div className="home">
       <ContentWrapper>
         <div className="heroSection">
           <HeadingText />
-          
+
           <Orbit />
         </div>
       </ContentWrapper>
@@ -22,7 +23,6 @@ const Home = () => {
           <div>
             <span className="colorHeading">STUDENT TESTIMONIALS</span>
           </div>
-
           <div className="bigHeading">
             Don’t just take our word for it, Go through AccioJob's{" "}
             <span className="colormiddleText">Student Reviews</span>
@@ -30,6 +30,9 @@ const Home = () => {
         </div>
       </ContentWrapper>
       <Carousel1 data={testimonials} />
+      <ContentWrapper>
+        <PlacementCompanyRail />
+      </ContentWrapper>
     </div>
   );
 };

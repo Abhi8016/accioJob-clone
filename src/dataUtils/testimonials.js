@@ -30,6 +30,8 @@ const testimonials = [
       "In 2021, I graduated from Mechanical Engineering, seeking a high-paying job. Despite poor college placements, I pursued opportunities in technical firms. Self-study didn't enhance my coding skills, but AccioJob changed that. Friends had completed DSA and Full-stack courses there, so I joined. AccioJob's online classes were interactive, accessible, and taught by exceptional instructors. I relocated to Kanpur mid-course due to hometown internet issues, ensuring seamless learning. Ultimately, AccioJob refined my coding and technical abilities, securing me an SDE position at MakeMyTrip!",
     color1: "#FEBBB4",
     color2: "#FF7168",
+    videoId: "wjmqK2_OQUA",
+    linkedIn: "https://www.linkedin.com/in/patelpradyot/?originalSubdomain=in",
   },
   {
     id: 2,
@@ -43,8 +45,9 @@ const testimonials = [
       "I graduated in 2017 with a mechanical engineering degree & never imagined I could switch to an amazing position so quickly. Although I had experience in the mechanical field, I always wanted to transition to IT but never had the chance. Determined to upskill myself, I researched and found AccioJob to be the best option. The fast-paced environment of the IT field appealed to me, and AccioJob became my guide to help me land a job and receive the perfect training. Their curriculum and teaching style made me feel on par with CS graduates, and the supportive learning environment kept me motivated.",
     color1: "#DCC8FE",
     color2: "#945EF7",
+    videoId: "1SqH4Qzh48s",
+    linkedIn: "https://www.linkedin.com/in/b-v-ajay-kumar-b48385124/",
   },
-  
 ];
 
 export default testimonials;
