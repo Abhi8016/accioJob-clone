@@ -9,6 +9,7 @@ import testimonials from "../../dataUtils/testimonials";
 import Carousel1 from "../../components/carousel/Carousel1";
 import PlacementCompanyRail from "./placementCompanyRail/PlacementCompanyRail";
 import Announcement from "./announcement/Announcement";
+import Courses from "./courses/Courses";
 const Home = () => {
   return (
     <div className="home">
@@ -36,6 +37,9 @@ const Home = () => {
       </ContentWrapper>
       <div className="announecement">
         <Announcement />
+      </div>
+      <div className="courses_cards">
+        <Courses />
       </div>
     </div>
   );
