@@ -30,8 +30,8 @@ const Orbit = () => {
           <div className="applyBtn">
             <CommonButton
               text={"Apply Now"}
-              paddingHV={"14px 130px"}
-              fontSize={"14px"}
+              paddingHV={"10px 115px"}
+              fontSize={"20px"}
               fontWight={"600"}
             />
           </div>

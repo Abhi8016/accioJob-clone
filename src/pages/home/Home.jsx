@@ -11,13 +11,13 @@ import PlacementCompanyRail from "./placementCompanyRail/PlacementCompanyRail";
 import Announcement from "./announcement/Announcement";
 import Courses from "./courses/Courses";
 import Enrollment from "./enrollment/Enrollment";
+import Instructors from "./instructors/Instructors";
 const Home = () => {
   return (
     <div className="home">
       <ContentWrapper>
         <div className="heroSection">
           <HeadingText />
-
           <Orbit />
         </div>
       </ContentWrapper>
@@ -44,6 +44,9 @@ const Home = () => {
       </div>
       <div className="enrollment">
         <Enrollment />
+      </div>
+      <div className="instructors">
+        <Instructors />
       </div>
     </div>
   );
