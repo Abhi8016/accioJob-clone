@@ -1,0 +1,90 @@
+@import "../../../mixins.scss";
+.nsdcWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @include md {
+    flex-direction: row !important;
+    // justify-content: center;
+    gap: 40px;
+  }
+  .nsdc-top {
+    margin: 30px 0;
+    // border: 2px solid blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include md {
+      width: 50%;
+      align-items: flex-start;
+      // justify-content: flex-start;
+    }
+    .badgeBullet {
+      border-radius: 25px;
+      margin-top: 50px;
+      margin-bottom: 25px;
+      padding: 10px 15px;
+      padding-left: 50px;
+      position: relative;
+      background-color: #fce7b1;
+      text-transform: uppercase;
+      font-size: 15px;
+      font-weight: 700;
+      color: #753b11;
+      @include md {
+        font-size: 17px;
+      }
+      > img {
+        position: absolute;
+        left: 17px;
+      }
+    }
+    .nsdcBigHeading {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 23.1px;
+      font-weight: 600;
+      line-height: 160%;
+      color: var(--black);
+      > span {
+        color: #ff7169;
+        font-weight: 700;
+      }
+      @include md {
+        text-align: left;
+        font-size: 42px;
+      }
+    }
+    .nsdcDes {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 12.8px;
+      line-height: 150%;
+      color: var(--greay);
+      @include md {
+        text-align: left;
+        font-size: 16px;
+      }
+    }
+  }
+  .nsdc-bottom {
+    // border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // margin-top: 20px;
+    margin-bottom: 70px;
+    @include md {
+      margin-top: 100px;
+      margin-bottom: 70px;
+    }
+    > img {
+      width: 375px;
+      @include md {
+        width: 620px;
+      }
+    }
+  }
+}

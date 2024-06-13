@@ -12,6 +12,7 @@ import Announcement from "./announcement/Announcement";
 import Courses from "./courses/Courses";
 import Enrollment from "./enrollment/Enrollment";
 import Instructors from "./instructors/Instructors";
+import Nsdc from "./nsdc/Nsdc";
 const Home = () => {
   return (
     <div className="home">
@@ -47,6 +48,9 @@ const Home = () => {
       </div>
       <div className="instructors">
         <Instructors />
+      </div>
+      <div className="nsdc">
+        <Nsdc />
       </div>
     </div>
   );
