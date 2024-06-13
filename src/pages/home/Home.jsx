@@ -10,6 +10,7 @@ import Carousel1 from "../../components/carousel/Carousel1";
 import PlacementCompanyRail from "./placementCompanyRail/PlacementCompanyRail";
 import Announcement from "./announcement/Announcement";
 import Courses from "./courses/Courses";
+import Enrollment from "./enrollment/Enrollment";
 const Home = () => {
   return (
     <div className="home">
@@ -40,6 +41,9 @@ const Home = () => {
       </div>
       <div className="courses_cards">
         <Courses />
+      </div>
+      <div className="enrollment">
+        <Enrollment />
       </div>
     </div>
   );

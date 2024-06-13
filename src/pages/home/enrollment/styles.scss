@@ -1,0 +1,197 @@
+@import "../../../mixins.scss";
+.enrollColoredHeading {
+  text-align: center;
+  margin-top: 50px;
+  padding: 35px 24px 24px;
+  > span {
+    background: var(--gradient-2);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 17px;
+    letter-spacing: 1.5px;
+    // font-weight: 600;
+  }
+}
+.enrollHeading {
+  color: var(--black);
+  text-align: center;
+  padding-bottom: 30px;
+  // letter-spacing: 1.5px;
+  font-size: 24px;
+  font-weight: 600;
+  @include md {
+    font-size: 40px;
+  }
+}
+.enrollComp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin-bottom: 30px;
+  // border: 1px solid blue;
+  .switchTabs {
+    border-radius: 10px;
+    background-color: white;
+    // border: 1px solid blue;
+    width: 100%;
+    height: 50px;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 40px;
+    @include md {
+      width: 80%;
+      height: 80px;
+    }
+    > div {
+      transition: all 0.3s ease;
+      height: 100%;
+      width: 50%;
+      font-size: 14px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      > span {
+        font-size: 12px;
+        // letter-spacing: 0.5px;
+        @include md {
+          font-size: 24px;
+        }
+      }
+    }
+    .option1 {
+      color: white;
+      background-color: var(--blue);
+    }
+  }
+  .enrollMentContent {
+    // position: relative;
+    width: 100%;
+    gap: 24px;
+    margin-bottom: 40px;
+    // border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
+    @include md {
+      flex-direction: row !important;
+      width: 80%;
+    }
+
+    .dataScience {
+      @include md {
+        width: 50% !important;
+      }
+    }
+
+    .EnComp {
+      position: relative;
+      width: 100%;
+      background-color: var(--white);
+      border-radius: 16px;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 20px;
+      box-shadow: 0 12px 16px -4px rgba(16, 24, 40, 0.078);
+      @include md {
+        gap: 30px;
+        padding: 35px 30px;
+      }
+      > span {
+        display: flex;
+        align-items: center;
+        font-size: 35px;
+        color: var(--blue);
+      }
+      .enrollCompHeading {
+        font-size: 22px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: var(--black);
+        @include md {
+          font-size: 25px;
+        }
+      }
+      .enrollCompDes {
+        font-size: 14.5px;
+        color: #8c9aac;
+        font-weight: 400;
+        letter-spacing: 0.3px;
+        @include md {
+          font-size: 15px;
+        }
+      }
+      .ins {
+        font-size: 12.5px;
+        color: var(--greay);
+        font-weight: 500;
+        @include md {
+          font-size: 14px;
+        }
+      }
+      .steps {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        gap: 24px;
+      }
+      .step {
+        display: flex;
+        // justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        width: 100%;
+        .step_text {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+          > div {
+            color: var(--black);
+            font-weight: 600;
+            line-height: 28px;
+            letter-spacing: 0.24px;
+            text-align: left;
+            font-size: 18px;
+          }
+          > p {
+            font-size: 13px;
+            color: #68717c;
+            letter-spacing: -0.32px;
+            line-height: 150%;
+          }
+        }
+      }
+    }
+    .semi_pap {
+      border: 2px solid var(--blue);
+      .cost {
+        position: absolute;
+        background: var(--gradient-2);
+        color: var(--white);
+        padding: 6px 18px;
+        font-size: 14.5px;
+        font-weight: 600;
+        border-radius: 50px;
+        top: -15px;
+        transform: translateX(105%);
+        @include md {
+          font-size: 16px;
+          top: -18px;
+          transform: translateX(140%);
+          padding: 8px 28px;
+        }
+      }
+    }
+  }
+}
