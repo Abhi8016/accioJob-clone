@@ -93,8 +93,8 @@ const Courses = () => {
                   style={{ display: `${showCur ? "block" : "none"}` }}
                 >
                   {item.curriculum.map((cur, index) => (
-                    <div>
-                      <p className="curItem" key={index + 564}>
+                    <div key={index + 564}>
+                      <p className="curItem">
                         <MdCheck style={{ color: "var(--blue)" }} />
                         <span>{cur}</span>
                       </p>

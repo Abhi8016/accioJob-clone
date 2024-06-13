@@ -40,8 +40,8 @@ const Carousel1 = ({ data }) => {
           </div>
           {data &&
             data.map((item) => (
-              <>
-                <div className="testimonsSmall" key={item.id}>
+              <React.Fragment key={item.id}>
+                <div className="testimonsSmall">
                   <div
                     className="t-top"
                     style={{ backgroundColor: `${item.color1}` }}
@@ -190,7 +190,7 @@ const Carousel1 = ({ data }) => {
                     <div className="des">{item.description}</div>
                   </div>
                 </div>
-              </>
+              </React.Fragment>
             ))}
         </div>
       </ContentWrapper>
