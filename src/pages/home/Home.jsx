@@ -14,11 +14,16 @@ import Enrollment from "./enrollment/Enrollment";
 import Instructors from "./instructors/Instructors";
 import Nsdc from "./nsdc/Nsdc";
 import Platform from "./platform/Platform";
+import perpuleArrow from "../../assets/purple_arraow.e16eb7db.svg"
+
 const Home = () => {
   return (
     <div className="home">
       <ContentWrapper>
         <div className="heroSection">
+          <div className="purpleArrow">
+            <img src={perpuleArrow} alt="image" />
+          </div>
           <HeadingText />
           <Orbit />
         </div>
