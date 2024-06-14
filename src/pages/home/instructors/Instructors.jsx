@@ -9,8 +9,6 @@ import instructorData from "./instructorData";
 import { FaLinkedinIn } from "react-icons/fa";
 
 const Instructors = () => {
-  const [show, setShow] = useState(false);
-  const [videoId, setVideoId] = useState(null);
   const carouselContainer = useRef();
   const navigation = (dir) => {
     const container = carouselContainer.current;

@@ -143,7 +143,7 @@ const Enrollment = () => {
                 100% Placement Assistance with only 12 Months Zero Cost EMI
               </div>
               <div className="ins">Just follow the steps below</div>
-              <div className="steps">
+              <div className="steps" style={{marginBottom: "100px"}}>
                 <div className="step">
                   <span>
                     <img src={exam} alt="image" />

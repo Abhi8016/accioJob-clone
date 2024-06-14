@@ -20,13 +20,13 @@
   }
   .tesimonSection {
     margin-bottom: 10px;
-    // border: 2px solid blue; 
+    // border: 2px solid blue;
     margin-top: 10px;
     margin-left: 5px;
     padding: 10px 0;
-    > div{
+    > div {
       text-align: center;
-      @include md{
+      @include md {
         text-align: left;
       }
     }
@@ -59,7 +59,7 @@
       }
     }
   }
-  .announecement{
+  .announecement {
     position: relative;
     // border: 2px solid blue;
     background-color: var(--blue3);
@@ -67,10 +67,16 @@
   // .courses_cards{
   //   // padding: 20px;
   // }
-  .enrollment{
+  .enrollment {
     background-color: var(--blue3);
   }
-  .nsdc{
+  .instructors {
+    margin-bottom: 50px;
+  }
+  .nsdc {
     background-color: #fef7e6;
+  }
+  .platform {
+    margin-top: 50px;
   }
 }

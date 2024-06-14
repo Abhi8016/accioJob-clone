@@ -58,8 +58,10 @@ a:visited {
 a:link {
   color: var(--blue);
 }
-::-webkit-scrollbar {
-  width: 3px; /* width of the entire scrollbar */
+@include md {
+  ::-webkit-scrollbar {
+    width: 3px; /* width of the entire scrollbar */
+  }
 }
 .auto::-webkit-scrollbar {
   width: 20px; /* width of the entire scrollbar */
@@ -85,7 +87,7 @@ a:link {
   //   width: 0;
   //   display: none;
   // }
-  
+
   // ::-webkit-scrollbar-thumb:horizontal {
   //   display: none;
   // }
