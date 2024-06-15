@@ -5,7 +5,7 @@
   // border: 2px solid red;
   position: absolute;
   margin-top: 100px;
-  height: 1000vh;
+  height: 2000vh;
   width: 100%;
   @include md {
     margin-top: 120px;
@@ -89,5 +89,8 @@
   }
   .platform {
     margin-top: 50px;
+  }
+  .placementW {
+    margin-top: 55px;
   }
 }

@@ -14,7 +14,8 @@ import Enrollment from "./enrollment/Enrollment";
 import Instructors from "./instructors/Instructors";
 import Nsdc from "./nsdc/Nsdc";
 import Platform from "./platform/Platform";
-import perpuleArrow from "../../assets/purple_arraow.e16eb7db.svg"
+import perpuleArrow from "../../assets/purple_arraow.e16eb7db.svg";
+import Placement from "./placement/Placement";
 
 const Home = () => {
   return (
@@ -60,6 +61,9 @@ const Home = () => {
       </div>
       <div className="platform">
         <Platform />
+      </div>
+      <div className="placementW">
+        <Placement />
       </div>
     </div>
   );
