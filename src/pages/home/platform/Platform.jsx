@@ -79,13 +79,13 @@ const Platform = () => {
         <div className="paltwrapBig">
           <Tabs data={platformData} />
         </div>
+        <VideoPopup
+          show={show}
+          setShow={setShow}
+          setVideoId={setVideoId}
+          videoId={videoId}
+        />
       </ContentWrapper>
-      <VideoPopup
-        show={show}
-        setShow={setShow}
-        setVideoId={setVideoId}
-        videoId={videoId}
-      />
     </>
   );
 };
