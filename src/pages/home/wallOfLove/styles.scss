@@ -1,0 +1,146 @@
+@import "../../../mixins.scss";
+.wallHeadings {
+  margin: 50px 0; ///
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  @include md {
+    margin-top: 80px;
+    margin-bottom: 60px;
+    // gap: 20px;
+  }
+  .wallColoredHeading {
+    background: var(--gradient-2);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .wallBigHeading {
+    color: var(--black);
+    font-size: 26px;
+    font-weight: 600;
+    &::after {
+      content: " Love 💙";
+      color: var(--blue);
+    }
+    @include md {
+      font-size: 44px;
+    }
+  }
+  .wallSmallHeading {
+    color: var(--greay);
+    font-size: 14px;
+    @include md {
+      font-size: 16px;
+    }
+  }
+}
+.studentFeedBackContainer {
+  // border: 2px solid blue;
+  padding: 0 0 40px 0;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  @include md {
+    overflow-x: hidden;
+  }
+  .stuFeedBackCard {
+    min-width: 300px;
+    // width: 250px;
+    border: 2px solid var(--greay2);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 5px 9px 40px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    @include md {
+      padding: 15px;
+      min-width: 350px !important;
+    }
+    .cardHead {
+      // margin-top: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      > .img1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 50%;
+        height: 50px;
+        > .mid {
+          display: none;
+          @include md {
+            display: block;
+            > .stuNameMid {
+              font-size: 18px;
+              font-weight: 600;
+              line-height: 160%;
+              color: var(--black);
+            }
+            > .stuPostMid {
+              font-size: 14px;
+              line-height: 160%;
+              color: var(--greay);
+            }
+          }
+        }
+        @include md {
+          height: 70px;
+        }
+      }
+      > a > .img2 {
+        height: 30px;
+        padding-right: 10px;
+        // transition: all 0.2s ease;
+        @include md {
+          height: 40px;
+        }
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+    .cardMid {
+      margin-top: 10px;
+      font-size: 10px;
+      // margin-bottom: 10px;
+      color: var(--greay);
+      @include md {
+        font-size: 15px;
+        display: none;
+      }
+      > .stuName {
+        font-size: 14px;
+        color: var(--black);
+        font-weight: 600;
+        margin-bottom: 5px;
+        @include md {
+          font-size: 17px;
+        }
+      }
+    }
+    .stuDes {
+      font-size: 10px;
+      color: var(--greay);
+      line-height: 160%;
+      font-weight: 400;
+      @include md {
+        font-size: 15px;
+      }
+    }
+  }
+}

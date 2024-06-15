@@ -16,6 +16,7 @@ import Nsdc from "./nsdc/Nsdc";
 import Platform from "./platform/Platform";
 import perpuleArrow from "../../assets/purple_arraow.e16eb7db.svg";
 import Placement from "./placement/Placement";
+import WallOfLove from "./wallOfLove/WallOfLove";
 
 const Home = () => {
   return (
@@ -64,6 +65,9 @@ const Home = () => {
       </div>
       <div className="placementW">
         <Placement />
+      </div>
+      <div className="wallOfLove">
+        <WallOfLove />
       </div>
     </div>
   );
