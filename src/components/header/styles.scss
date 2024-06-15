@@ -177,12 +177,12 @@
     // border: 2px solid blue;
     margin-top: 5px;
     padding: 10px;
-    font-size: 12px;
+    font-size: 10px;
     font-weight: 500;
     background-color: var(--blue);
     color: var(--white);
     @include md {
-      font-size: 10px;
+      font-size: 14px;
       margin-top: 14px;
     }
   }

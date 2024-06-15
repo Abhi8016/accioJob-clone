@@ -43,6 +43,7 @@
   }
   //////////////////////////////////////////
   .orbitContainer {
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,6 +124,7 @@
       }
     }
     .python {
+      overflow: hidden;
       z-index: 1;
       width: 290px;
       height: 290px;
