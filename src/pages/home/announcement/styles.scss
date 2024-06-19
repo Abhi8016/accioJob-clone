@@ -83,11 +83,11 @@
       &::after {
         content: "";
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(0deg);
-        height: 700px;
-        width: 190px;
+        top: 80px;
+        left: -60%;
+        // transform: translate(-50%, -60%) rotate(90deg);
+        height: 120px;
+        width: 900px;
         background-color: var(--blue3);
         border-radius: 11px;
         animation: move 4s linear infinite;
@@ -156,6 +156,7 @@
 }
 @keyframes move {
   100% {
-    transform: translate(-50%, -50%) rotate(360deg);
+    // transform: translate(-50%,-60%) rotate(270deg);
+    transform:  rotate(-360deg);
   }
 }
