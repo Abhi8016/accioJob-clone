@@ -1,0 +1,74 @@
+@import "../../../mixins.scss";
+
+.featHeadings {
+  //   border: 1px solid black;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  @include md {
+    margin-top: 40px;
+  }
+  .featOnColoredHeading {
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    background: var(--gradient-2);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+    font-size: 16px;
+    @include md {
+      font-size: 18px;
+    }
+  }
+  .featBigHeading {
+    font-size: 24px;
+    font-weight: 600;
+    @include md {
+      font-size: 40px;
+    }
+  }
+  .featOnLogoContainer {
+    // margin-top: 30px;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+    white-space: nowrap;
+    position: relative;
+    // border: 1px solid rgb(255, 123, 0);
+    .featOnLogoSlides {
+      z-index: 2;
+      display: inline-block;
+      animation: 40s mov linear infinite;
+      //   border: 1px solid blue;
+      img {
+        margin: 0 20px;
+        width: 150px;
+        height: 80px;
+        @include md {
+          width: 250px;
+          height: 100px;
+          margin: 0 30px;
+        }
+      }
+      //   }
+    }
+  }
+}
+
+.featOnLogoContainer:hover .featOnLogoSlides {
+  cursor: pointer;
+  animation-play-state: paused !important;
+}
+
+@keyframes mov {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
