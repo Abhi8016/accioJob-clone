@@ -3,21 +3,37 @@
   //   border: 0.5px solid blue;
   padding-bottom: 10px;
   .mainHeading {
+    // padding: 20px;
+    border-radius: 18px;
+    // background-color: #153869;
     margin-bottom: 6px;
     text-align: center;
     // border: 2px solid yellow;
-    color: var(--black);
+    // background: var(--gradient-2);
+    animation: hue 5s infinite linear;
     font-weight: 600;
     line-height: 150%;
     font-size: 24px;
-    .spanColorMainHeading {
-      color: var(--blue);
+    > span {
+      // color: var(--white);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: var(--gradient-2);
+      animation: hue 5s infinite linear;
     }
     @include md {
-      margin-top: 120px;
+      margin-top: 100px;
       text-align: left;
       font-size: 48px;
       line-height: 130%;
+    }
+  }
+  @keyframes hue {
+    from {
+      filter: hue-rotate(0deg);
+    }
+    to {
+      filter: hue-rotate(-360deg);
     }
   }
   .subHeading {
@@ -26,6 +42,7 @@
     background: var(--gradient-2);
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: hue 5s infinite linear;
     // padding: 0 10px;
     @include md {
       margin-top: 30px;
@@ -102,8 +119,8 @@
     .linkDinBtn:active {
       transform: scale(0.98);
     }
-    a{
-        text-decoration: none;
+    a {
+      text-decoration: none;
     }
   }
 }

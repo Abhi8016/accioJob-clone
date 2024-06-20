@@ -93,7 +93,7 @@ const Courses = () => {
                   style={{ display: `${showCur ? "block" : "none"}` }}
                 >
                   {item.curriculum.map((cur, index) => (
-                    <div key={index + 564}>
+                    <div key={index}>
                       <p className="curItem">
                         <MdCheck style={{ color: "var(--blue)" }} />
                         <span>{cur}</span>
@@ -109,7 +109,7 @@ const Courses = () => {
                 </div>
                 <div className="plaList curList">
                   {item.placement.map((pla, index) => (
-                    <p className="plaItem curItem" key={index + 987}>
+                    <p className="plaItem curItem" key={index}>
                       <MdCheck style={{ color: "var(--blue)" }} />
                       <span>{pla}</span>
                     </p>

@@ -1,0 +1,29 @@
+@import "../../mixins.scss";
+
+.faqHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 40px;
+  @include md {
+    margin-bottom: 80px;
+  }
+  .faqColorHeading {
+    text-align: center;
+    background: var(--gradient-2);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .faqBigHeading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    @include md {
+      font-size: 44px;
+    }
+  }
+}

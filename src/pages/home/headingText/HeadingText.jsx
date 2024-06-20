@@ -14,8 +14,9 @@ const HeadingText = () => {
     <>
       <div className="heading">
         <div className="mainHeading">
-          Ignite Your <span className="spanColorMainHeading">Tech Career</span>{" "}
-          Today: Learn, Grow, and Get Placed
+          <span>
+          Ignit Your Tech Career Today: Learn, Grow, and Get Placed
+          </span>
         </div>
         <div className="subHeading">
           Full Stack Development | Cyber Security | Data Science & AI
@@ -51,7 +52,10 @@ const HeadingText = () => {
           </div>
         </div>
         <div className="links">
-          <a href="https://www.linkedin.com/pulse/linkedin-top-startups-2023-20-indian-companies-rise-eo4oe/" target="_blank">
+          <a
+            href="https://www.linkedin.com/pulse/linkedin-top-startups-2023-20-indian-companies-rise-eo4oe/"
+            target="_blank"
+          >
             <button className="linkDinBtn">
               <img src={linkedinLogo} alt="" />
               <span>LinkedIn Top 20 Startups</span>

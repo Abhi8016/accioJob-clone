@@ -1,0 +1,66 @@
+@import "../../mixins.scss";
+.accordianContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include md {
+    align-items: center;
+    margin: 0 60px;
+  }
+
+  .accordian {
+    display: flex;
+    flex-direction: column;
+    .toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--black);
+      padding: 20px 0px;
+      text-align: left;
+      gap: 30px;
+      outline: none;
+      border: none;
+      background-color: var(--white);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      @include md {
+        font-size: 20px;
+      }
+      .openClose {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        font-weight: 600;
+        transition: all 0.2s ease;
+      }
+    }
+  }
+  .ansContainer {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid var(--greay2);
+    // background-color: var(--white);
+    .ans {
+    //   padding: 0px 15px;
+      padding-bottom: 20px;
+      line-height: 170%;
+      @include md {
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+.toggled {
+  .ansContainer {
+    max-height: 500px;
+    transition: all 0.2s ease;
+    color: #595959;
+    font-size: 14px;
+  }
+}

@@ -18,6 +18,7 @@ import perpuleArrow from "../../assets/purple_arraow.e16eb7db.svg";
 import Placement from "./placement/Placement";
 import WallOfLove from "./wallOfLove/WallOfLove";
 import FeatOn from "./featOn/FeatOn";
+import HomeFaq from "../homeFaq/HomeFaq";
 
 const Home = () => {
   return (
@@ -72,6 +73,9 @@ const Home = () => {
       </div>
       <div className="featOn">
         <FeatOn />
+      </div>
+      <div className="homeAccordian">
+        <HomeFaq />
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ const Enrollment = () => {
               setOption1IsActive(true);
             }}
           >
-            <span>Java & MERN Full Stack</span>
+            <span style={{ cursor: "pointer" }}>Java & MERN Full Stack</span>
           </div>
           <div
             className={`${!option1IsActive ? "option1" : ""}`}
@@ -31,7 +31,7 @@ const Enrollment = () => {
               setOption1IsActive(false);
             }}
           >
-            <span>Data Science & AI</span>
+            <span style={{ cursor: "pointer" }}>Data Science & AI</span>
           </div>
         </div>
         <div className="enrollMentContent">
@@ -143,7 +143,7 @@ const Enrollment = () => {
                 100% Placement Assistance with only 12 Months Zero Cost EMI
               </div>
               <div className="ins">Just follow the steps below</div>
-              <div className="steps" style={{marginBottom: "100px"}}>
+              <div className="steps" style={{ marginBottom: "100px" }}>
                 <div className="step">
                   <span>
                     <img src={exam} alt="image" />
