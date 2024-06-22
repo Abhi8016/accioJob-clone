@@ -47,6 +47,8 @@
 body {
   background-color: var(--white);
   // line-height: 1.6;
+  // background-size: 100vh;
+  // overflow: overlay;
 }
 a {
   text-decoration: none;
@@ -58,37 +60,20 @@ a:visited {
 a:link {
   color: var(--blue);
 }
-@include md {
-  ::-webkit-scrollbar {
-    width: 3px; /* width of the entire scrollbar */
-  }
-}
-.auto::-webkit-scrollbar {
-  width: 20px; /* width of the entire scrollbar */
-}
 
-@include md {
-  ::-webkit-scrollbar-track {
-    display: none;
-  }
+// ::-webkit-scrollbar {
+//   background: transparent;
+// }
+
+::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
 }
 
-@include md {
-  ::-webkit-scrollbar-thumb {
-    // display: none;
-    height: 150px;
-    background: var(--blue); /* color of the scroll thumb */
-    border-radius: 50px; /* roundness of the scroll thumb */
-    // border: 3px solid orange;  /* creates padding around scroll thumb */
-  }
-
-  // ::-webkit-scrollbar:horizontal {
-  //   height: 0;
-  //   width: 0;
-  //   display: none;
-  // }
-
-  // ::-webkit-scrollbar-thumb:horizontal {
-  //   display: none;
-  // }
+::-webkit-scrollbar-thumb {
+  opacity: 0.5;
+  // display: none;
+  height: 150px;
+  background: var(--blue3); /* color of the scroll thumb */
+  border-radius: 50px; /* roundness of the scroll thumb */
+  border: 1px solid var(--blue); /* creates padding around scroll thumb */
 }
