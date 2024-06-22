@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./styles.scss";
 import CommonButton from "../../components/button/CommonButton";
 import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
@@ -19,8 +19,39 @@ import Placement from "./placement/Placement";
 import WallOfLove from "./wallOfLove/WallOfLove";
 import FeatOn from "./featOn/FeatOn";
 import HomeFaq from "../homeFaq/HomeFaq";
+import Footer from "../../components/footer/Footer";
+import whatsApp from "../../assets/footerImgs/WhatsApp_icon.svg";
+import { useLocation } from "react-router-dom";
+import { useState } from "react";
 
 const Home = () => {
+  const location = useLocation();
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [show, setShow] = useState("hide");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  const controlBtnPosition = () => {
+    // console.log(window.scrollY);
+    if (window.scrollY > 150) {
+      // console.log("hiiii");
+      setShow("show");
+    } else if (window.scrollY < 150) {
+      setShow("hide");
+    }
+
+    setLastScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", controlBtnPosition);
+    return () => {
+      window.removeEventListener("scroll", controlBtnPosition);
+    };
+  }, [lastScrollY]);
+
   return (
     <div className="home">
       <ContentWrapper>
@@ -77,6 +108,35 @@ const Home = () => {
       <div className="homeAccordian">
         <HomeFaq />
       </div>
+      <div className="homeFooter">
+        <Footer />
+      </div>
+      <div className={`whatsappForphone ${show}`}>
+        <a
+          href="https://api.whatsapp.com/send?phone=918595563221&text=Hey%20Team%2c%20I%27m%20interested%20in%20registering%20for%20your%20course.%0a%0aThanks&source=&data="
+          target="_blank"
+        >
+          <img src={whatsApp} alt="logo" />
+        </a>
+
+        <div>
+          <a href="https://authentication.acciojob.com/sign-up" target="_blank">
+            <CommonButton
+              text={"Apply Now >"}
+              paddingHV={"10px 85px"}
+              btnColor={"var(--gradient-2)"}
+              fontSize={"17.5px"}
+            />
+          </a>
+        </div>
+      </div>
+      <a
+        href="https://api.whatsapp.com/send?phone=918595563221&text=Hey%20Team%2c%20I%27m%20interested%20in%20registering%20for%20your%20course.%0a%0aThanks&source=&data="
+        target="_blank"
+        className="fixedWhatsapp"
+      >
+        <img src={whatsApp} alt="logo" />
+      </a>
     </div>
   );
 };

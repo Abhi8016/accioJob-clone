@@ -8,8 +8,11 @@ const HomeFaq = () => {
   return (
     <ContentWrapper>
       <div className="faqHeading">
-        <div className="faqColorHeading">HAVE ANY QUESTIONS</div>
-        <div className="faqBigHeading">Frequently asked Questions</div>
+        <div className="faqColorHeading">HAVE ANY DOUBTS ?</div>
+        <div className="faqBigHeading">
+          Frequently asked{" "}
+          <span style={{ color: "var(--blue)" }}>Questions</span>
+        </div>
       </div>
       <div className="homeAccor">
         <Accordion data={faqData} openOthers={false} />

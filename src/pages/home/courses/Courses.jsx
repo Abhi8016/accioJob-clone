@@ -123,12 +123,12 @@ const Courses = () => {
                   btnColor={"#CFECFE"}
                   textColor={"var(--blue)"}
                   shawodColor={"#9cc4dd"}
-                  paddingHV={"12px 35px"}
+                  paddingHV={"auto auto"}
                 />
                 <CommonButton
                   text={"Learn More"}
                   comp={<MdOutlineKeyboardArrowRight />}
-                  paddingHV={"12px 30px"}
+                  paddingHV={"auto auto"}
                 />
               </div>
             </div>

@@ -5,7 +5,7 @@ const Tabs = ({ data }) => {
   const [activeTab, setACtiveTab] = useState(0);
   const [show, setShow] = useState(false);
   const [videoId, setVideoId] = useState(null);
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <div className="tabsContainer">

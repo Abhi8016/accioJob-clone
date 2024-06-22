@@ -5,7 +5,7 @@
   // border: 2px solid red;
   position: absolute;
   margin-top: 100px;
-  height: 2000vh;
+  // height: 2000vh;
   width: 100%;
   @include md {
     margin-top: 120px;
@@ -96,7 +96,72 @@
   .featOn {
     margin-top: 50px;
     padding: 5px 0;
-    background: linear-gradient(180deg, var(--white) 26.97%, rgba(187, 213, 250, 0.27));
+    background: linear-gradient(
+      180deg,
+      var(--white) 26.97%,
+      rgba(187, 213, 250, 0.27)
+    );
     margin-bottom: 80px;
+  }
+  .homeFooter {
+    margin-top: 45px;
+    border-top: 1px solid var(--greay2);
+  }
+  .fixedWhatsapp {
+    display: none;
+    @include md {
+      display: inline;
+      position: fixed;
+      z-index: 9999999999999999999999;
+      bottom: 10px;
+      right: 7px;
+      transition: all 0.2s ease;
+      &:hover {
+        transform: scale(1.08);
+      }
+      > img {
+        height: 45px;
+      }
+    }
+  }
+  .show {
+    transition: all 0.9s ease;
+    // display: none;
+    // transform: translateY(0%);
+  }
+  .hide {
+    transition: all 0.9s ease;
+    transform: translateY(500px);
+  }
+  .whatsappForphone {
+    // transform: translateY(80px);
+    padding: 0px 20px;
+    z-index: 9999999999999999999999999;
+    // opacity: 0;
+    position: fixed;
+    bottom: 00px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    // justify-content: space-around;
+    // gap: 10px;
+    background: var(--white);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.16);
+    > div {
+      padding: 10px 0px;
+      width: 100%;
+      height: 65px;
+      display: flex;
+      justify-content: end;
+      align-items: center !important;
+    }
+    > a {
+      > img {
+        height: 35px;
+      }
+    }
+    @include md {
+      display: none;
+    }
   }
 }

@@ -42,7 +42,10 @@ const Header = () => {
 
   return (
     <>
-      <header className={`navBar ${mobileView ? "mobileView" : ""}`}>
+      <header
+        className={`navBar ${mobileView ? "mobileView" : ""}`}
+        style={{ position: "fixed" }}
+      >
         <ContentWrapper>
           <div className="left">
             <div className="logo">
@@ -110,7 +113,7 @@ const Header = () => {
                 More
               </p>
               <CommonButton
-                text={"Go To Dashbord"}
+                text={"Login"}
                 btnColor={"var(--white)"}
                 shawodColor={"var(--buttonBlue)"}
                 textColor={"var(--blue)"}
@@ -143,9 +146,11 @@ const Header = () => {
           </div>
         )}
         {/* </ContentWrapper> */}
-        <div className="notice">
-          <p>Next batch starts on ⌛️ 7th June. Hurry, limited seats left!</p>
-        </div>
+        {/* <ContentWrapper> */}
+          <div className="notice">
+            <p>Next batch starts on ⌛️ 7th June. Hurry, limited seats left!</p>
+          </div>
+        {/* </ContentWrapper> */}
       </header>
       {courseListView && (
         <>

@@ -1,0 +1,238 @@
+@import "../../mixins.scss";
+
+.footer {
+  padding: 0 10px;
+  width: 100%;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--greay2);
+
+  .logosandDes {
+    background-color: var(--blue3);
+    padding: 20px 15px;
+    // border: 1px solid blue;
+    border-radius: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    @include md {
+      flex-direction: row;
+      align-items: center;
+      padding: 25px;
+    }
+    .footerLogos {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include md {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+      }
+      > div {
+        > img {
+          width: 150px;
+          @include md {
+            width: 220px;
+          }
+        }
+      }
+      > span {
+        display: flex;
+        gap: 15px;
+        @include md {
+          gap: 25px;
+        }
+        > img {
+          width: 20px;
+          height: 20px;
+          transition: all 0.2s ease;
+          &:active {
+            transform: scale(1.3);
+          }
+          @include md {
+            width: 25px;
+            height: 25px;
+            &:hover {
+              transform: scale(1.3);
+            }
+          }
+        }
+      }
+    }
+    .footerDes {
+      > span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        color: var(--greay);
+        line-height: 160%;
+        font-weight: 600;
+        background-clip: text;
+        line-height: 170%;
+        -webkit-text-fill-color: transparent;
+        background-image: var(--gradient-2);
+        animation: colorchange 5s infinite linear;
+
+        @include md {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  .allCourses {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    // margin-top: 24px;
+    gap: 36px;
+    border-radius: 15px;
+    background-color: var(--blue3);
+    // background: var(--gradient-2);
+    // animation: colorchange 5s infinite linear;
+    padding: 20px 15px;
+    @include md {
+      flex-direction: row;
+      padding: 25px;
+    }
+    .footerCourses {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      text-align: left;
+      border-radius: 15px;
+      // background-color: var(--blue3);
+      // padding: 20px 15px;
+      > div {
+        color: var(--blue);
+        font-size: 16.5px;
+        font-weight: 600;
+      }
+      > span {
+        color: var(--black);
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: 0.8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        > svg {
+          font-size: 20px;
+        }
+        &:hover {
+          color: var(--blue);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .FooterLocations {
+    .footerCourses {
+      > button {
+        border: none;
+        display: flex;
+        padding: 6px 10px;
+        align-items: center;
+        gap: 6px;
+        border-radius: 100px;
+        background: #e2e3e4;
+        width: max-content;
+        color: var(--blue);
+        cursor: pointer;
+        transition: all 0.2s ease;
+        &:hover {
+          transform: scale(1.08);
+        }
+      }
+    }
+  }
+  .contactUs {
+    .footerCourses {
+      .footerBtn {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+        > button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 12px;
+          border-radius: 8px;
+          padding: 12px 12px;
+          width: 100%;
+          border: 2px solid var(--blue);
+          font-size: 16px;
+          transition: all 0.2s ease;
+          cursor: pointer;
+          > svg {
+            font-size: 20px;
+          }
+          &:hover {
+            transform: scale(1.02);
+          }
+        }
+        .Dbtn {
+          background-color: #2f80ed;
+          color: #fff;
+        }
+        .Rbtn {
+          background-color: var(--white);
+          color: var(--blue);
+        }
+      }
+    }
+  }
+}
+.copyRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: 45px;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--greay);
+  @include md {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  > span {
+    // border: 1px solid blue;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 16px;
+    @include md {
+      // justify-content: space-around;
+      justify-content: flex-end;
+      width: 20%;
+    }
+    > img {
+      height: 25px;
+    }
+  }
+}
+
+@keyframes colorchange {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(-360deg);
+  }
+}

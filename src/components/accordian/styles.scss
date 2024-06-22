@@ -5,13 +5,15 @@
   justify-content: center;
   @include md {
     align-items: center;
-    margin: 0 60px;
+    margin: 0 80px;
   }
 
   .accordian {
+    width: 100%;
     display: flex;
     flex-direction: column;
     .toggle {
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -46,19 +48,21 @@
     border-bottom: 1px solid var(--greay2);
     // background-color: var(--white);
     .ans {
-    //   padding: 0px 15px;
+      //   padding: 0px 15px;
       padding-bottom: 20px;
-      line-height: 170%;
+      line-height: 25px;
+
       @include md {
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 400;
+        margin-right: 220px;
       }
     }
   }
 }
 .toggled {
   .ansContainer {
-    max-height: 500px;
+    max-height: 600px;
     transition: all 0.2s ease;
     color: #595959;
     font-size: 14px;
