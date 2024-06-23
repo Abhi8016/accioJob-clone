@@ -70,6 +70,20 @@
       }
     }
   }
+  .placementRailHeading {
+    margin-top: 50px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    > span {
+      font-size: 18px;
+      font-weight: 600;
+      background: var(--gradient-2);
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
   .announecement {
     position: relative;
     // border: 2px solid blue;

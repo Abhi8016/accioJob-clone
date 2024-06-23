@@ -65,6 +65,17 @@ a:link {
 //   background: transparent;
 // }
 
+// ::-moz-selection {
+//   /* Code for Firefox */
+//   color: var(--white);
+//   background: var(--blue3);
+// }
+
+// ::selection {
+//   // color: var(--white) !important;
+//   background: var(--buttonBlue) !important;
+// }
+
 ::-webkit-scrollbar {
   width: 10px; /* width of the entire scrollbar */
 }

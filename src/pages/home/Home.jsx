@@ -23,6 +23,7 @@ import Footer from "../../components/footer/Footer";
 import whatsApp from "../../assets/footerImgs/WhatsApp_icon.svg";
 import { useLocation } from "react-router-dom";
 import { useState } from "react";
+import TypeWriter from "../../components/typeWriter/TypeWriter";
 
 const Home = () => {
   const location = useLocation();
@@ -76,7 +77,38 @@ const Home = () => {
       </ContentWrapper>
       <Carousel1 data={testimonials} />
       <ContentWrapper>
-        <PlacementCompanyRail />
+        <div className="placementRailHeading">
+          <span>OVER 450+ HIRING PARTNERS</span>
+        </div>
+        <TypeWriter
+          heading={"Top Startups & MNCs Hire"}
+          texts={[
+            "Java Full Stack Developer",
+            "Backend Developer",
+            "Frontend Developer",
+            "Data Analyst",
+            "Backend Software Engineer",
+            "Frontend Software Engineer",
+            "Business Analyst",
+            "Full Stack Developer",
+            "Software Enginee",
+            "Data Engineer",
+            "Web Developer",
+            "Software Dev Engineer",
+            "Reactjs Developer",
+            "NodeJs Developer",
+            "Application Developer",
+            "Financial Analyst",
+            "Cloud Developer",
+            "Product Dev Engineer",
+            "Marketing Analyst",
+            "ML Engineer",
+            "DevOps Engineer",
+            "Python Developer",
+            "Data Scientist",
+          ]}
+        />
+        <PlacementCompanyRail /> {/* placementRail */}
       </ContentWrapper>
       <div className="announecement">
         <Announcement />

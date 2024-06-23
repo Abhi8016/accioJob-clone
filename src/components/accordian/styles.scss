@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  
   @include md {
     align-items: center;
     margin: 0 80px;
@@ -28,6 +29,11 @@
       background-color: var(--white);
       cursor: pointer;
       transition: all 0.2s ease;
+      border-radius: 8px;
+      padding: 25px 10px;
+      &:hover {
+        background-color: var(--blue3);
+      }
       @include md {
         font-size: 20px;
       }
@@ -46,6 +52,7 @@
     overflow: hidden;
     transition: all 0.2s ease;
     border-bottom: 1px solid var(--greay2);
+    padding: 0px 10px;
     // background-color: var(--white);
     .ans {
       //   padding: 0px 15px;
