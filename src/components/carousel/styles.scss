@@ -56,6 +56,7 @@
     }
     .testimonsSmall {
       min-width: 300px;
+      max-height: 720px;
       background: var(--white);
       // border: 2px solid rgb(7, 66, 133);
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
@@ -160,10 +161,10 @@
         .testimonDes {
           width: 100%;
           // font-weight: 500;
-          font-size: 13.5px;
+          font-size: 12.5px;
           color: #7e7e7e;
           text-align: center;
-          line-height: 1.7;
+          line-height: 1.5;
         }
       }
       .t-bottom {
@@ -179,6 +180,11 @@
           font-weight: 600;
           font-size: 17px;
           color: #012555;
+        }
+        .companyLogo {
+          > img {
+            height: 30px;
+          }
         }
       }
       @include md {
@@ -216,12 +222,16 @@
             line-height: 150%;
           }
           .logo {
+            ////////////////////////////////////////////////////////////////////////////////////
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             margin-bottom: 15px;
             width: 100%;
+            > img {
+              height: 30px !important;
+            }
           }
           .stuImg {
             overflow: hidden;
@@ -302,10 +312,10 @@
             }
           }
           .des {
-            font-weight: 500;
+            font-weight: 400;
             font-size: 14px;
             color: #595959;
-            line-height: 150%;
+            line-height: 1.5;
           }
         }
       }

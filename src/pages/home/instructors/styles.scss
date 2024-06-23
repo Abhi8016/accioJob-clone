@@ -134,7 +134,9 @@
         left: 40px;
         > img {
           height: 70px;
+          width: 70px;
           vertical-align: middle;
+          border-radius: 50%;
         }
       }
       .insLinkedIn {
@@ -142,10 +144,11 @@
         width: 100%;
         display: flex;
         justify-content: end;
+        
         @include md {
           padding-right: 15px;
         }
-        > span {
+        > a {
           text-align: right;
           display: flex;
           align-items: center;
@@ -156,7 +159,15 @@
           color: var(--white);
           padding: 8px;
           border-radius: 50%;
+          transition: all 0.2s ease;
+          &:hover{
+            transform: scale(1.05);
+          }
+          &:active{
+            transform: scale(1.09);
+          }
         }
+        
       }
       .insInfo {
         width: 100%;

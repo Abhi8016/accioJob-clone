@@ -62,9 +62,9 @@ const Instructors = () => {
                   </span>
 
                   <div className="insLinkedIn">
-                    <span>
+                    <a href={items.link} target="_blank">
                       <FaLinkedinIn />
-                    </span>
+                    </a>
                   </div>
                   <div className="insInfo">
                     <div className="insName">{items.name}</div>
