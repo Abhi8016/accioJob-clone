@@ -48,13 +48,13 @@ const Header = () => {
       >
         <ContentWrapper>
           <div className="left">
-            <div className="logo">
+            <a className="logo" href="/">
               <div className="rotate">
                 {" "}
                 <img src={accioLogo} alt="logo image" />
               </div>
               <img src={acciojobLogo} alt="logo image" />
-            </div>
+            </a>
             <div className="leftSide">
               <div className="courseBtn">
                 <button
@@ -147,9 +147,9 @@ const Header = () => {
         )}
         {/* </ContentWrapper> */}
         {/* <ContentWrapper> */}
-          <div className="notice">
-            <p>Next batch starts on ⌛️ 7th June. Hurry, limited seats left!</p>
-          </div>
+        <div className="notice">
+          <p>Next batch starts on ⌛️ 7th June. Hurry, limited seats left!</p>
+        </div>
         {/* </ContentWrapper> */}
       </header>
       {courseListView && (
@@ -170,13 +170,7 @@ const Header = () => {
               <div>
                 Classroom Program<span className="new">New</span>
               </div>
-              <div
-                onClick={() => {
-                  navigate("/kjjkkj");
-                }}
-              >
-                MERN Full Stack Development
-              </div>
+              <div>MERN Full Stack Development</div>
               <div>JAVA Full Stack Development</div>
               <div>Data Science & AI</div>
             </div>

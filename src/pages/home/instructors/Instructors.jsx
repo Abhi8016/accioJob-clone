@@ -14,8 +14,8 @@ const Instructors = () => {
     const container = carouselContainer.current;
     const scrollAmount =
       dir === "left"
-        ? container.scrollLeft - (container.offsetWidth + 30)
-        : container.scrollLeft + (container.offsetWidth + 30);
+        ? container.scrollLeft - (900)
+        : container.scrollLeft + (900);
 
     container.scrollTo({
       left: scrollAmount,
