@@ -148,7 +148,7 @@ const Header = () => {
         {/* </ContentWrapper> */}
         {/* <ContentWrapper> */}
         <div className="notice">
-          <p>Next batch starts on ⌛️ 7th June. Hurry, limited seats left!</p>
+          <p>Next batch starts on ⌛️ 7th July. Hurry, limited seats left!</p>
         </div>
         {/* </ContentWrapper> */}
       </header>
