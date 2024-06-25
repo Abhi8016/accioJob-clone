@@ -112,20 +112,30 @@ const Header = () => {
               >
                 More
               </p>
-              <CommonButton
-                text={"Login"}
-                btnColor={"var(--white)"}
-                shawodColor={"var(--buttonBlue)"}
-                textColor={"var(--blue)"}
-                borderColor={"var(--blue)"}
-              />
-              <div className={show}>
+              <a
+                href="https://authentication.acciojob.com/sign-up"
+                target="_blank"
+              >
                 <CommonButton
-                  paddingHV={"12px 40px"}
-                  text={"Apply Now"}
-                  btnColor={"var(--gradient-2)"}
+                  text={"Go to Dashboard"}
+                  btnColor={"var(--white)"}
                   shawodColor={"var(--buttonBlue)"}
+                  textColor={"var(--blue)"}
+                  borderColor={"var(--blue)"}
                 />
+              </a>
+              <div className={show}>
+                <a
+                  href="https://authentication.acciojob.com/sign-up"
+                  target="_blank"
+                >
+                  <CommonButton
+                    paddingHV={"12px 40px"}
+                    text={"Apply Now"}
+                    btnColor={"var(--gradient-2)"}
+                    shawodColor={"var(--buttonBlue)"}
+                  />
+                </a>
               </div>
             </div>
           </div>
