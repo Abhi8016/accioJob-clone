@@ -12,8 +12,8 @@
     color: var(--black);
     font-size: 25px;
     font-weight: 600;
-    @include md{
-        font-size: 45px;
+    @include md {
+      font-size: 45px;
     }
   }
   > div {
@@ -26,16 +26,19 @@
       font-weight: 600;
       color: var(--blue);
       transition: all 0.2s ease;
-      @include md{
+      @include md {
         font-size: 40px;
       }
     }
     .cursor {
-      font-size: 45px;
+      font-size: 25px;
       font-weight: 500;
       color: var(--blue);
       transition: all 0.2s ease;
       animation: blink 1s linear infinite;
+      @include md {
+        font-size: 45px;
+      }
     }
   }
 }
