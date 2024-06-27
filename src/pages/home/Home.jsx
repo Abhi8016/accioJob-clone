@@ -38,15 +38,10 @@ const Home = () => {
   const open = () => setModalopen(true);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setTimer((prev) => prev - 1);
-    }, 1000);
     const timeout = setTimeout(() => {
-      clearInterval(interval);
       setModalopen(false);
     }, 25000);
     return () => {
-      clearInterval(interval);
       clearTimeout(timeout);
     };
   }, [modalOpen]);
