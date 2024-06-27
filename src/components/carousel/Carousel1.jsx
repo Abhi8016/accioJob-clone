@@ -10,13 +10,15 @@ import VideoPopup from "../videoPopup/VideoPopup";
 const Carousel1 = ({ data }) => {
   const [show, setShow] = useState(false);
   const [videoId, setVideoId] = useState(null);
+
   const carouselContainer = useRef();
+
   const navigation = (dir) => {
     const container = carouselContainer.current;
     const scrollAmount =
       dir === "left"
-        ? container.scrollLeft - (container.offsetWidth + 30)
-        : container.scrollLeft + (container.offsetWidth + 30);
+        ? container.scrollLeft - (container.offsetWidth / 2)
+        : container.scrollLeft + (container.offsetWidth / 2);
 
     container.scrollTo({
       left: scrollAmount,

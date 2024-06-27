@@ -23,29 +23,29 @@ const TypeWriter = ({
       const currentText = texts[currentWordIndex];
 
       if (!isDeleting && currentCharacterIndex < currentText.length) {
-        // Display the next char of the current word
+        // Display the next character of the current word
         setDisplayText(
           (prevText) => prevText + currentText[currentCharacterIndex]
         );
         setCurrentCharacterIndex((prevIndex) => prevIndex + 1);
 
       } else if (!isDeleting && currentCharacterIndex === currentText.length) {
-        // Word completely typed, delay before deleting
+        // Word completely typed, start the delay before deleting
         clearInterval(interval);
         
         timeout = setTimeout(() => {
-            setIsDeleting(true); // changing the isDelet state to true
+            setIsDeleting(true);
         }, wordDisplayDuration);
 
 
       } else if (isDeleting && displayText.length > 0) {
-        // Remove the last char of displayText
+        // Remove the last character of displayText (simulate backspace effect)
         setDisplayText((prevText) => prevText.slice(0, -1));
 
       } else if (isDeleting && displayText.length === 0) {
         // Move to the next word
         clearInterval(interval);
-        setIsDeleting(false); // changing the isDelet state to false
+        setIsDeleting(false);
         setCurrentWordIndex((prevIndex) => (prevIndex + 1) % texts.length);
         setCurrentCharacterIndex(0);
         startTyping();
@@ -59,10 +59,10 @@ const TypeWriter = ({
       );
     };
 
-    
-    startTyping(); // Initial start
+    // Initial start of typing
+    startTyping();
 
-
+    // Clean up intervals and timeouts
     return () => {
       clearInterval(interval);
       clearTimeout(timeout);

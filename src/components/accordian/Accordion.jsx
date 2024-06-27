@@ -8,10 +8,12 @@ const Accordion = ({ data, openOthers }) => {
   useEffect(() => {
     if (data) {
       setAccordionItems([
+        // get the first obj form the data array
         ...data.slice(0, 1).map((items) => ({
           ...items,
           toggled: true,
         })),
+        // get the rest of the obj
         ...data.slice(1).map((items) => ({
           ...items,
           toggled: false,

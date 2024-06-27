@@ -33,19 +33,21 @@ const Home = () => {
 
   const [modalOpen, setModalopen] = useState(true);
   const [timer, setTimer] = useState(25);
+  const [isTimerActive, setIsTimerActive] = useState(true);
   const close = () => setModalopen(false);
   const open = () => setModalopen(true);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      setModalopen(false);
-    }, 25000);
     const interval = setInterval(() => {
       setTimer((prev) => prev - 1);
-    }, 1000); // timer for modal
-    return () => {
-      clearTimeout(timeout);
+    }, 1000);
+    const timeout = setTimeout(() => {
       clearInterval(interval);
+      setModalopen(false);
+    }, 25000);
+    return () => {
+      clearInterval(interval);
+      clearTimeout(timeout);
     };
   }, [modalOpen]);
 
