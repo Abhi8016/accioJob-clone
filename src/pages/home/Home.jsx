@@ -32,6 +32,7 @@ const Home = () => {
   const [show, setShow] = useState("hide");
 
   const [modalOpen, setModalopen] = useState(true);
+  const [timer, setTimer] = useState(25);
   const close = () => setModalopen(false);
   const open = () => setModalopen(true);
 
@@ -39,7 +40,13 @@ const Home = () => {
     const timeout = setTimeout(() => {
       setModalopen(false);
     }, 25000);
-    return () => timeout;
+    const interval = setInterval(() => {
+      setTimer((prev) => prev - 1);
+    }, 1000); // timer for modal
+    return () => {
+      clearTimeout(timeout);
+      clearInterval(interval);
+    };
   }, [modalOpen]);
 
   useEffect(() => {
@@ -73,9 +80,7 @@ const Home = () => {
           handleClose={close}
           title={"Important"}
           text1={`Please note that this is a clone of the original Acciojob webpage, some of the links might not work. For authentic information, please visit Acciojob.com.`}
-          text2={
-            "You can click anywhere outside this window to close it, or it will automatically close after 25 seconds."
-          }
+          text2={`You can click anywhere outside this window to close it, or it will automatically close after ${timer} seconds.`}
         />
       )}
       {!modalOpen && (
