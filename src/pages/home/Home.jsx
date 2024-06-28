@@ -34,22 +34,35 @@ const Home = () => {
   const [modalOpen, setModalopen] = useState(true);
   const [timer, setTimer] = useState(25);
   const [isTimerActive, setIsTimerActive] = useState(true);
-  const close = () => setModalopen(false);
+  const close = () => {
+    setIsTimerActive(false);
+    setModalopen(false);
+  };
   const open = () => setModalopen(true);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setTimer((prev) => prev - 1);
-    }, 1000);
-    const timeout = setTimeout(() => {
-      clearInterval(interval);
-      setModalopen(false);
-    }, 25000);
+    let interval2;
+    let timeout;
+    if (isTimerActive) { 
+      // when page loded for the first time it will be true
+      interval2 = setInterval(() => {
+        setTimer((prev) => prev - 1);
+      }, 1000);
+      timeout = setTimeout(() => {
+        clearInterval(interval2);
+        setModalopen(false);
+      }, 25000);
+    } else {
+      // when modal is closed by itself or forcedfully 
+      // need to clear the timeout and intervals 
+      clearInterval(interval2);
+      clearTimeout(timeout);
+    }
     return () => {
-      clearInterval(interval);
+      clearInterval(interval2);
       clearTimeout(timeout);
     };
-  }, []);
+  }, [isTimerActive]); // this useEffect will dependent on the "isTimerActive" state
 
   useEffect(() => {
     window.scrollTo(0, 0);
