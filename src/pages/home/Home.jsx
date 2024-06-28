@@ -51,7 +51,7 @@ const Home = () => {
       timeout = setTimeout(() => {
         clearInterval(interval2);
         setModalopen(false);
-      }, 25000);
+      }, timer * 1000);
     } else {
       // when modal is closed by itself or forcedfully 
       // need to clear the timeout and intervals 
